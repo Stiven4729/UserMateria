@@ -1,0 +1,62 @@
+/* Estilos para el navbar */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between; /* Alinea al contenido al final del contenedor */
+    align-items: flex-start; /* Alinea hacia arriba */
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos para los enlaces */
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0; /* Sin margen */
+    padding: 10px 0; /* Espaciado en cada enlace */
+    font-weight: bold;
+    font-size: 30px;
+    transition: color 0.3s ease; /* Agregar transición de color */
+}
+
+/* Estilos para el menú hamburguesa */
+.menu-icon {
+    display: none; /* Ocultar por defecto en pantallas grandes */
+    cursor: pointer;
+}
+
+/* Estilos para el menú desplegable */
+.menu-dropdown {
+    display: none;
+    background-color: #333;
+    width: 450px; /* Ancho del menú desplegable */
+    position: absolute;
+    top: 85px; /* Ajusta la posición vertical según tus necesidades */
+    left: 20px; /* Alinea a la izquierda */
+    padding: 10px 0; /* Espaciado en el menú */
+}
+
+/* Mostrar el menú en pantallas pequeñas */
+@media screen and (max-width: 768px) {  
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-dropdown {
+        display: none;
+        position: static;
+        background-color: transparent;
+        width: auto;
+    }
+}
+
+/* Cambiar color al pasar el cursor sobre el enlace */
+.navbar-link:hover {
+    color: #ff5733; /* Color de transición al pasar el cursor */
+}

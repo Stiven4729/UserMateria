@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Administrador de horarios</title>
+    <script src="../js/userController.js"></script>
+</head>
+
+<body>
+    <a href="homeCalendario.html">Regresar al Home</a>
+    <h1>Lista de usuarios registrados</h1>
+    <ul id="lista-usuarios"></ul>
+
+</body>
+<script>
+    adicionarUsuariosEnLista();
+
+    async function adicionarUsuariosEnLista() {
+        let result = await getUsers();
+        let lista = "";
+        for (let i = 0; i < result.users.length; i++) {
+            lista = lista + "<li>" + result.users[i].nombres + " " + result.users[i].apellidos + "</li>"
+        }
+        document.getElementById("lista-usuarios").innerHTML = lista;
+    }
+</script>
+
+</html>

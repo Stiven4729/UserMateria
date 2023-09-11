@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Administrador de materias</title>
+    <script src="../js/materiaController.js"></script>
+</head>
+
+<body  bgcolor="F7EAC8">
+    <a href="homeCalendario.html">regresar al home</a>
+    <h1>Registro</h1>
+    <div>
+	<center>
+	<table border="3">
+	<tr>
+        <td><select name="nombre"placeholder="nombre" id="nombre" />
+		<option>Matematicas</option>
+		<option>Religion</option>
+		<option>Sistemas</option>
+		<option>Robotica</option>
+		<option>Logica de programacion</option>
+		<option>paginas web dinamicas</option>
+		<option>paginas web estandar</option>
+		<option>Arte</option>
+		<option>Politica</option>
+		<option>Programacion</option>
+		<option>Java</option></td></tr>
+		<tr>
+        <td><input type="text" placeholder="descripcion" id="descripcion" /></td>
+		</tr>
+		<tr>
+        <td><input type="time" placeholder="h_inicio" id="h_inicio" /></td>
+		</tr>
+		<tr>
+        <td><input type="time" placeholder="h_fin" id="h_fin" /></td>
+		</tr>
+		<tr>
+        <td><select id="dias" />
+		<option>Lunes</option>
+		<option>Martes</option>
+		<option>Miercoles</option>
+		<option>Jueves</option>
+		<option>Viernes</option></td></tr>
+		<tr>
+        <td><input type="text" placeholder="grado" id="grado" /></td>
+		</tr>
+		</table>
+		<br>
+		<button value="Ingresar" onclick="createMateria()">Registrar</button>
+		<br>
+		<br>
+		<br>
+        <img src="logo.png" width="40%" height="80%">
+    </div>
+</center>
+</body>
+
+</html>

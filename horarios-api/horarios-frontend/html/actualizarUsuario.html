@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Administrador de horarios</title>
+    <script src="../js/userController.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styleUpdateUser.css" />
+
+</head>
+
+<body>
+    <a href="homeCalendario.html" class="btn-back">Regresar al Home</a>
+    <div class="container">
+        <h2>Actualizar Datos</h2>
+        <form class="form-animate">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombres" name="nombres" placeholder="nombres" required>
+            </div>
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" placeholder="apellidos" required>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" placeholder="correo" required>
+            </div>
+            <div class="form-group">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="clave" name="clave" placeholder="clave" required>
+            </div>
+            <button value="Ingresar" class="btn-submit" onclick="updateUser(userId)">Actualizar</button>
+        </form>
+    </div>  
+    
+</body>
+<script>
+    var usuario = JSON.parse(sessionStorage.getItem("user"));
+    var userId = usuario[0].id;
+    document.getElementById("nombres").value = usuario[0].nombres;
+    document.getElementById("apellidos").value = usuario[0].apellidos;
+    document.getElementById("correo").value = usuario[0].correo;
+    document.getElementById("clave").value = usuario[0].clave;
+</script>
+
+</html>
+

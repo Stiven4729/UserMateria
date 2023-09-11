@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Administrador de horarios</title>
+    <script src="../js/userMateriaController.js"></script>
+</head>
+
+<body>
+    <a href="homeCalendario.html">Regresar al Home</a>
+    <h1>Lista de materias registradas</h1>
+    <ul id="lista-userMaterias"></ul>
+
+</body>
+<script>
+    adicionarUsuarioMateriasEnLista();
+
+    async function adicionarUsuarioMateriasEnLista() {
+        let result = await getUsuarioMaterias();
+        let lista = "";
+        for (let i = 0; i < result.usuarios_materias.length; i++) {
+            lista = lista + "<li>" + result.usuarios_materias[i].id + " " + result.usuarios_materias[i].id_usuario + " " + result.usuarios_materias[i].id_materia + "" + result.usuarios_materias[i].notas + "</li>"
+        }
+        document.getElementById("lista-userMaterias").innerHTML = lista;
+    }
+</script>
+
+</html>

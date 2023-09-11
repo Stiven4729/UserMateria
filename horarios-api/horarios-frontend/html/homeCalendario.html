@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/userController.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/styleHome.css" />
+</head>
+
+<body>
+	  <nav>
+        <div class="navbar-container">
+				<a href="#" class="navbar-link" id="menu-toggle">Bienvenido: <span id="usuario"></span></a>
+            <div class="menu-icon">&#9776;</div>
+            <div class="menu-dropdown">
+                <ul>
+                    <li><a href="listaUsuarios.html" class="navbar-link">Usuarios</a></li>
+                    <li><a href="actualizarUsuario.html" class="navbar-link">Actualizar Perfil</a></li>
+                    <li><a href="registroMateria.html" class="navbar-link">Añadir Materia</a></li>
+                    <li><a href="actualizarMateria.html" class="navbar-link">Actualizar Materia</a></li>
+                    <li><a href="registroUserMateria.html" class="navbar-link">Añadir Materia en el Horario</a></li>
+                    <li><a href="listaMaterias.html" class="navbar-link">Materias</a></li>
+                    <li><a href="listaUsuariosMateria.html" class="navbar-link">Lista del Horario</a></li>
+                    <!-- Agrega más elementos si es necesario -->
+                </ul>
+            </div> 
+			<div id="myHtml"  onclick="logout()">
+				<a href="#" class="navbar-link">Cerrar sesión</a>
+		    </div>	
+        </div>
+    </nav>
+
+    <script>
+        // JavaScript para mostrar/ocultar el menú desplegable al hacer clic en "Bienvenido"
+        const menuToggle = document.getElementById('menu-toggle');
+		const menuDropdown = document.querySelector('.menu-dropdown');
+
+        menuToggle.addEventListener('click', () => {
+            menuDropdown.style.display = menuDropdown.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+</body>
+
+<script type="text/javascript">
+    var usuario = JSON.parse(sessionStorage.getItem("user"));
+    if (usuario) {
+        document.getElementById("usuario").innerHTML = usuario[0].nombres;
+    } else {
+        window.location.href = "index.html";
+    }
+    console.log();
+</script>
+
+</html>

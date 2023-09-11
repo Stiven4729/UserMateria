@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%; /* Ancho al 100% */
+}
+
+.contenedor {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 80%; /* Ancho al 80% */
+}
+
+/* Estilos adicionales */
+.contenedor {
+    background-color: #f7f7f7; /* Cambiar el color de fondo */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    max-width: 400px; /* Limitar el ancho máximo del contenedor */
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333; /* Cambiar el color del texto */
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    color: #555; /* Cambiar el color del texto de la etiqueta */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px; /* Añadir más espacio entre los campos */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px; /* Aumentar el relleno */
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el enlace de volver */
+.volver-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: absolute; /* Cambiar a posición absoluta */
+    top: 20px; /* Ajustar la posición desde la parte superior */
+    left: 20px; /* Ajustar la posición desde la izquierda */
+}
+
+.volver-link:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Cambiar el color de texto al pasar el cursor */
+.volver-link:hover {
+    color: #fff;
+}

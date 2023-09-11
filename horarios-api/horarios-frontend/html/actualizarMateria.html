@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Administrador de horarios</title>
+    <script src="../js/materiaController.js"></script>
+</head>
+
+<body bgcolor="F7EAC8">
+    <a href="homeCalendario.html">Regresar al Home</a>
+    <center>
+    <h1>Actualizar datos de la materia</h1>
+    <div>
+        <input type="text" placeholder="id" id="id" />
+        <input type="text" placeholder="nombre" id="nombre" />
+        <input type="text" placeholder="descripcion" id="descripcion" />
+        <input type="time" placeholder="h_inicio" id="h_inicio" />
+        <input type="time" placeholder="h_fin" id="h_fin" />
+        <input type="text" placeholder="dias" id="dias" />
+        <input type="text" placeholder="grado" id="grado" />
+    </center>
+        <center>
+            <br>
+            <br>
+        <button value="Ingresar" onclick="updateMateria()">Actualizar</button>
+    </div>
+    <br>
+            <br>
+            <br>
+            <br>
+    <img src="logo.png" width="40%" height="80%">
+</center>
+</body>
+<script>
+    var materiaId = document.getElementById("id").value;
+</script>
+
+</html>

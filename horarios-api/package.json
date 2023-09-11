@@ -1,0 +1,17 @@
+{
+  "name": "horarios-api",
+  "version": "1.0.0",
+  "description": "API para el ejercicio de la clase UTC, Universidad Autónoma de Manizales",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Stiven",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "nodemon": "^1.19.4",
+    "path": "^0.12.7"
+  }
+}

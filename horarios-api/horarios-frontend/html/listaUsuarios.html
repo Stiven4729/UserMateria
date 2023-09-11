@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Administrador de horarios</title>
+    <script src="../js/userController.js"></script>
+    <link rel="stylesheet" href="../css/styleListUser.css">
+</head>
+
+<body>
+    <!-- Tabla para mostrar los datos -->
+    <a href="homeCalendario.html" class="btn-regresar">Regresar al Home</a>
+    <h1>Lista de usuarios registrados</h1>
+    <!-- Tabla para mostrar los datos -->
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-usuarios"></tbody>
+    </table>
+</body>
+<script>
+    // Llama a la función que se encuentra en userController.js
+    adicionarUsuariosEnTabla();
+</script>
+
+</html>

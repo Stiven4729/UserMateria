@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Administrador de horarios</title>
+    <script src="../js/materiaController.js"></script>
+</head>
+
+<body bgcolor="F7EAC8">
+    <a href="homeCalendario.html">Regresar al Home</a>
+    <h1>Lista de materias registradas</h1>
+    <ul id="lista-materias"></ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="logo.png" width="40%" height="80%" align="right">
+
+</body>
+<script>
+    adicionarMateriasEnLista();
+
+    async function adicionarMateriasEnLista() {
+        let result = await getMaterias();
+        let lista = "";
+        for (let i = 0; i < result.materias.length; i++) {
+            lista = lista + "<li>" + result.materias[i].id + " " + result.materias[i].nombre +" " + result.materias[i].descripcion +" " + result.materias[i].h_inicio + " " + result.materias[i].h_fin +" " + result.materias[i].dias +" " + result.materias[i].grado +"</li>"
+        }
+        document.getElementById("lista-materias").innerHTML = lista;
+    }
+</script>
+
+</html>
